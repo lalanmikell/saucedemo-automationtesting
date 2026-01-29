@@ -20,5 +20,5 @@ test('Invalid Login test', async ({ page }) => {
     await loginPage.gotoLoginPage();
     await loginPage.login('user', 'passwrord');
     await expect(loginPage.errorDivMsg).toBeVisible();
-    await expect(loginPage.errorDivMsg).toHaveText('Epic sadface:')
+    await expect(loginPage.errorDivMsg).toContainText('Epic sadface:')
 })

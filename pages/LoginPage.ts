@@ -15,7 +15,7 @@ export class LoginPage{
         this.usernameInput = page.getByRole('textbox', {name: 'Username'});
         this.passwordInput = page.getByRole('textbox', {name: 'Password'});
         this.loginBtn = page.getByRole('button', {name: 'Login'});
-        this.errorDivMsg = page.getByTestId('error');
+        this.errorDivMsg = page.locator('[data-test="error"]');
     }
 
     async gotoLoginPage(){
