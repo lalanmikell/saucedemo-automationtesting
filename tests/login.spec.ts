@@ -11,14 +11,14 @@ test('Login test', async ({ page }) =>{
 
     await loginPage.gotoLoginPage();
     await loginPage.login('standard_user', 'secret_sauce');
-    expect (await cartPage.isPageLoaded());
 })
 
-test.only('Invalid Login test', async ({ page }) => {
+test('Invalid Login test', async ({ page }) => {
 
     const loginPage = new LoginPage(page);
 
     await loginPage.gotoLoginPage();
     await loginPage.login('user', 'passwrord');
-    expect (await loginPage.getErrorMessage()).toBeVisible();
+    await expect(loginPage.errorDivMsg).toBeVisible();
+    await expect(loginPage.errorDivMsg).toHaveText('Epic sadface:')
 })
