@@ -45,7 +45,7 @@ test('Header Select option test', async ({page}) =>{
     await headerComponent.selectProductSortOptionValue("Price (low to high)");
 })
 
-test.only('Adding product to cart test', async ({page}) => {
+test('Adding product to cart test', async ({page}) => {
     const loginPage = new LoginPage(page);
     const headerComponent = new HeaderComponent(page)
     const productItem = new ProductsPage(page)
