@@ -1,13 +1,11 @@
 import {test, expect} from '@playwright/test';
 import { LoginPage} from '../pages/LoginPage';
-import { CartPage } from '../pages/CartPage';
-
-    
+import { YourCartPage } from '../pages/YourCartPage';
 
 test('Login test', async ({ page }) =>{
 
     const loginPage = new LoginPage(page);
-    const cartPage = new CartPage(page);
+    const cartPage = new YourCartPage(page);
 
     await loginPage.gotoLoginPage();
     await loginPage.login('standard_user', 'secret_sauce');
