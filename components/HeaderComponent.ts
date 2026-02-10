@@ -26,7 +26,6 @@ export class HeaderComponent{
     async userLogout(){
         await this.burgerMenuBtn.click();
         await this.logoutBtn.click();
-        await this.page.waitForURL("https://www.saucedemo.com/")
     }
 
     async clickShoppingCartBtn(){
